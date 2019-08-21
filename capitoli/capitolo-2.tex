@@ -115,7 +115,7 @@ Durante il periodo di tirocinio, la fase di analisi dei casi d'uso è da conside
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=1\columnwidth]{immagini/casi_duso1.png}
-    \caption{\label{fig:attori}Casi d'uso visitatore avente appuntamento}
+    \caption{\label{fig:casi_duso_visitatore}Casi d'uso visitatore avente appuntamento}
 \end{figure}
 Dall'elaborazione di tale analisi sono quindi emersi i seguenti casi d'uso riportati:
 \begin{center}
@@ -152,7 +152,7 @@ Dall'elaborazione di tale analisi sono quindi emersi i seguenti casi d'uso ripor
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\columnwidth]{immagini/casi_duso2.png}
-    \caption{\label{fig:attori}Sotto casi d'uso visitatore avente appuntamento}
+    \caption{\label{fig:sotto_casi_duso_visitatori1}Sotto casi d'uso visitatore avente appuntamento}
 \end{figure}
 \begin{center}
 	\centering
@@ -176,7 +176,7 @@ Dall'elaborazione di tale analisi sono quindi emersi i seguenti casi d'uso ripor
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\columnwidth]{immagini/casi_duso21.png}
-    \caption{\label{fig:attori}Sotto casi d'uso visitatore avente appuntamento}
+    \caption{\label{fig:sotto_casi_duso_visitatore2}Sotto casi d'uso visitatore avente appuntamento}
 \end{figure}
 \begin{center}
 	\centering
@@ -200,7 +200,7 @@ La seconda parte di analisi dei casi d'uso, è dedicata al servizio di consegna 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=1\columnwidth]{immagini/casi_duso3.png}
-    \caption{\label{fig:attori}Casi d'uso corriere}
+    \caption{\label{fig:casi_duso_corriere}Casi d'uso corriere}
 \end{figure}
 Dall'elaborazione di tale analisi sono quindi emersi i seguenti casi d'uso riportati:
 \begin{center}
@@ -235,4 +235,39 @@ Dall'elaborazione di tale analisi sono quindi emersi i seguenti casi d'uso ripor
 	\end{longtable}
 \end{center}
 \section{Voice User Interface - VUI}
+Altro aspetto importante dell'analisi è stata sulla Voice User Interface, che nel documento verrà abbreviato con l'acronimo VUI. La VUI per la Skill è l’interfaccia che rende possibile l’interazione umana parlata con il computer, utilizzando il riconoscimento vocale per comprendere comandi e domande vocali, ed infine il text to speech per riprodurre una risposta. Nel caso del progetto la VUI è rappresentata dall'assistente vocale Amazon Alexa, la quale eseguirà la Skill prodotta. Vista la ovvia complessità che presenta un'interazione umana vocale con un computer, la VUI fornita dall'assistente vocale Alexa presenta alcuni limiti che verranno analizzati successivamente in un nuovo punto del capitolo.\\
+L’obbiettivo che si prefigge nel realizzare la Skill è quello di poter sostenere una conversazione, il più naturale possibile, con la persona accolta all'entrata dell'azienda Crispy Bacon. L’idea è quindi che l’ospite possa dialogare con Concierge Croccante, motivare la presenza in azienda e notificare l’interessato della visita. Dall'analisi emerge una conversazione come l'esempio seguente in formato testo di quello che si vuole ottenere dal prodotto finale:
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\columnwidth]{immagini/esempioVUI.png}
+    \caption{\label{fig:esempioVUI}Esempio di conversazione}
+\end{figure}
+\begin{itemize}
+	\item \textbf{Utente}: \textit{"Alexa, sono qui."}
+	\item \textbf{Concierge}: \textit{ "Buongiorno! Benvenuto a Crispy Bacon, quale è il motivo della sua visita?"}
+	\item \textbf{Utente}: \textit{"Devo consegnare un pacco."}
+	\item \textbf{Concierge}: \textit{ "Chi è il destinatario del pacco?"}
+	\item \textbf{Utente}: \textit{"Matteo P."}
+	\item \textbf{Concierge}: \textit{ "Ho notificato a Matteo che c'è un pacco per lui, sta per arrivare."}
+	\item \textbf{Concierge}: \textit{ "Crispy Bacon la ringrazia"}
+\end{itemize}
+La Skill Concierge Croccante necessita quindi di ricevere dati in input per poter completare il processo di accoglienza della persona entrata in azienda. È quindi necessario suddividere i dati richiesti in base alla tipo di utente:
+\begin{center}
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{3}{tableLight}{}
+	\begin{longtable}{  p{4.5cm} p{8.3cm} }
+		\rowcolor{tableHead}
+		\textbf{\textcolor{white}{Tipo di utente}} & \textbf{\textcolor{white}{Dati da raccogliere}} \\
+		\endhead  
+		
+		Persona senza \mbox{appuntamento} &  - Proprio nome \newline - Proprio cognome \newline - Nome persona cercata  \newline - Cognome persona cercata \\
+		Persona con \mbox{appuntamento} &  - Proprio nome \newline - Proprio cognome \newline - Nome persona cercata  \newline - Cognome persona cercata \newline - Orario dell'appuntamento \\
+		Corriere &  - Il proprio titolo (corriere) \newline - Nome della persona interessata \newline - Cognome della persona interessata \\
+		Postino &  - Il proprio titolo (postino) \newline - Nome della persona interessata \newline - Cognome della persona interessata \\
+		\rowcolor{white}
+		\caption{Tabella tipologia dati per tipo di utente}
+	\end{longtable}
+\end{center}
+\subsection{Voice Flow}
 \section{Graphical User Interface - GUI}
