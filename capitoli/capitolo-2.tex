@@ -59,15 +59,15 @@ In merito allo studio di analisi fatto all'inizio del periodo di tirocinio sono 
 		\rowcolor{tableHead}
 		\textbf{\textcolor{white}{Identificativo}} & \textbf{\textcolor{white}{Requisito}} \\
 		\endhead  
-		RO1 & La Skill al momento dal lancio deve presentare un messaggio di benvenuto (\textbf{VUI}) \\
-		RO2 & La Skill al momento dal lancio deve presentare un messaggio di benvenuto (\textbf{GUI}) \\
-		RO3 & La Skill al momento dal lancio deve presentare un elenco essenziale e sintetico delle azioni da fare (\textbf{VUI}) \\ 
-		RO4 & La Skill al momento dal lancio deve presentare un elenco essenziale e sintetico delle azioni da fare  (\textbf{GUI}) \\
-		RO5 & La Skill deve poter ricevere le informazioni necessarie dal visitatore per mezzo di una conversazione impostata (\textbf{VUI})  \\
-		RO6 & La Skill deve poter riportare le informazioni ottenute dal visitatore e riportarle nello schermo del dispositivo (\textbf{GUI}) \\
+		RO1 & La Skill al momento dal lancio deve presentare un messaggio di benvenuto (VUI) \\
+		RO2 & La Skill al momento dal lancio deve presentare un messaggio di benvenuto (GUI) \\
+		RO3 & La Skill al momento dal lancio deve presentare un elenco essenziale e sintetico delle azioni da fare (VUI) \\ 
+		RO4 & La Skill al momento dal lancio deve presentare un elenco essenziale e sintetico delle azioni da fare  (GUI) \\
+		RO5 & La Skill deve poter ricevere le informazioni necessarie dal visitatore per mezzo di una conversazione impostata (VUI)  \\
+		RO6 & La Skill deve poter riportare le informazioni ottenute dal visitatore e riportarle nello schermo del dispositivo (GUI) \\
 		RO7\label{RO7} & La Skill deve poter utilizzare e interrogare il servizio di calendarizzazione con le informazioni ottenute dal visitatore al fine di notificare l'interessato della visita.\\
 		RO8\label{RO8} & La Skill deve notificare o inviare una notifica all'interessato della visita.\\
-		RO9 & La Skill deve riportare sullo schermo del dispositivo delle funzioni disponibili in base alle risposte ricevute dal dialogo fatto con il visitatore (\textbf{GUI - VUI})\\
+		RO9 & La Skill deve riportare sullo schermo del dispositivo delle funzioni disponibili in base alle risposte ricevute dal dialogo fatto con il visitatore (GUI - VUI)\\
 		\rowcolor{white}
 		\caption{Tabella tracciamento requisiti obbligatori}
 	\end{longtable}
@@ -110,5 +110,129 @@ Di seguito viene riportato lo schema degli attori individuati utilizzando lo sta
     \includegraphics[width=0.9\columnwidth]{immagini/attori.png}
     \caption{\label{fig:attori}Utenti del sistema}
 \end{figure}
-\subsection{Casi d'uso - Persona}
+\subsection{Casi d'uso - Visitatore}
+Durante il periodo di tirocinio, la fase di analisi dei casi d'uso è da considerarsi divisa in due parti simili fra loro: quella dedicata al visitatore, ovvero colui che si presenta negli uffici dell'azienda avente un appuntamento registrato in calendario, o che semplicemente si presenta senza preavviso, e il servizio di consegna pacchi svolto dal postino o dal corriere. In entrambe le parti gli attori avvieranno la Skill installata nel dispositivo Amazon Echo Show e seguiranno le istruzioni riportate a voce dall'assistente vocale oppure mostrate a video dal display. In questa sezione viene riporta una rappresentazione grafica dei casi d'uso dell'utente identificato come "Visitatore avente appuntamento", che descrive le interazioni che l'attore svolge con il sistema.  
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\columnwidth]{immagini/casi_duso1.png}
+    \caption{\label{fig:attori}Casi d'uso visitatore avente appuntamento}
+\end{figure}
+Dall'elaborazione di tale analisi sono quindi emersi i seguenti casi d'uso riportati:
+\begin{center}
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{3}{tableLight}{}
+	\begin{longtable}{  p{2.5cm} p{9.8cm} }
+		\rowcolor{tableHead}
+		\textbf{\textcolor{white}{Identificativo}} & \textbf{\textcolor{white}{Descrizione}} \\
+		\endhead  
+		
+		UC1 &  \textit{Attori}: persona con o senza appuntamento \newline \textit{Scopo}: l'utente può avviare Concierge Croccante \newline \textit{Pre-condizione}: il dispositivo Amazon deve aver avviato \mbox{l'assistente} Alexa \newline \textit{Post-condizione}: l'utente ha avviato Concierge Croccante \\
+		
+		UC2 &  \textit{Attori}: persona \newline \textit{Scopo}: l'utente riceve un messaggio di benvenuto sul display del dispositivo \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente riceve un messaggio di benvenuto sul display del dispositivo \\
+		
+		UC3 &  \textit{Attori}: persona \newline \textit{Scopo}: l'utente riceve un messaggio vocale di benvenuto dalla Skill \mbox{Concierge} Croccante \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente riceve un messaggio vocale dalla Skill Concierge Croccante\\
+		
+		UC4 &  \textit{Attori}: persona \newline \textit{Scopo}: l'utente visualizza l'elenco sintetico ed essenziale di azioni sul \mbox{display} del dispositivo \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente visualizza l'elenco di azioni sul display del dispositivo \\
+		
+		UC5 &  \textit{Attori}: persona \newline \textit{Scopo}: viene esposto all'utente l'elenco sintetico ed essenziale di azioni \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: viene esposto all'utente l'elenco di azioni disponibili da Concierge Croccante \\
+		
+		UC6 &  \textit{Attori}: persona con appuntamento \newline \textit{Scopo}: l'utente può annunciarsi per essere accolto dalla persona cercata \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente si annuncia \\
+		
+		UC7 &  \textit{Attori}: persona con appuntamento \newline \textit{Scopo}: viene visualizzato un messaggio, su display e vocale, di errore specifico per l'eccezione riscontrata \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente riceve un messaggio su display e vocale di errore\\
+		
+		UC8 &  \textit{Attori}: persona \newline \textit{Scopo}: l'utente può annunciarsi per essere accolto dalla persona cercata \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente si annuncia \\
+		
+		UC9 &  \textit{Attori}: persona \newline \textit{Scopo}: viene visualizzato un messaggio, su display e vocale, di errore specifico per l'eccezione riscontrata \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente riceve un messaggio su display e vocale di errore\\
+		
+		\rowcolor{white}
+		\caption{\label{tab:UC_persona}Tabella casi d'uso persona con appuntamento e non}
+	\end{longtable}
+\end{center}
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\columnwidth]{immagini/casi_duso2.png}
+    \caption{\label{fig:attori}Sotto casi d'uso visitatore avente appuntamento}
+\end{figure}
+\begin{center}
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{3}{tableLight}{}
+	\begin{longtable}{  p{2.5cm} p{9.6cm} }
+		\rowcolor{tableHead}
+		\textbf{\textcolor{white}{Identificativo}} & \textbf{\textcolor{white}{Descrizione}} \\
+		\endhead  
+		
+		UC6.1 &  \textit{Attori}: persona con o senza appuntamento \newline \textit{Scopo}: l'utente inserisce/dice il suo nome e cognome \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente ha inserito/detto il suo nome e cognome \\
+		
+		UC6.2 &  \textit{Attori}: persona con o senza appuntamento \newline \textit{Scopo}: l'utente inserisce/dice il nome e cognome della persona che cerca \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente ha inserito/detto il suo nome e cognome della persona cercata \\
+		
+		UC6.3 &  \textit{Attori}: persona con o senza appuntamento \newline \textit{Scopo}: l'utente inserisce/dice l'orario di appuntamento \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente ha inserito/detto l'orario di appuntamento \\
+		
+		\rowcolor{white}
+		\caption{Tabella sotto casi d'uso persona con appuntamento e non}
+	\end{longtable}
+\end{center}
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\columnwidth]{immagini/casi_duso21.png}
+    \caption{\label{fig:attori}Sotto casi d'uso visitatore avente appuntamento}
+\end{figure}
+\begin{center}
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{3}{tableLight}{}
+	\begin{longtable}{  p{2.5cm} p{9.8cm} }
+		\rowcolor{tableHead}
+		\textbf{\textcolor{white}{Identificativo}} & \textbf{\textcolor{white}{Descrizione}} \\
+		\endhead  
+		
+		UC8.1 &  \textit{Attori}: persona \newline \textit{Scopo}: l'utente inserisce/dice il suo nome e cognome \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente ha inserito/detto il suo nome e cognome \\
+		
+		UC8.2 &  \textit{Attori}: persona  \newline \textit{Scopo}: l'utente inserisce/dice il nome e cognome della persona che cerca \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente ha inserito/detto il suo nome e cognome della persona cercata \\
+
+		\rowcolor{white}
+		\caption{Tabella sotto casi d'uso persona con appuntamento e non}
+	\end{longtable}
+\end{center}
 \subsection{Casi d'uso - Postino/Corriere}
+La seconda parte di analisi dei casi d'uso, è dedicata al servizio di consegna dei pacchi che viene svolto dal postino o dal corriere. In questa sezione si rappresenta graficamente i casi d'uso dell'utente identificato come "Corriere", che descrive le interazioni che l'attore svolge con il sistema.
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\columnwidth]{immagini/casi_duso3.png}
+    \caption{\label{fig:attori}Casi d'uso corriere}
+\end{figure}
+Dall'elaborazione di tale analisi sono quindi emersi i seguenti casi d'uso riportati:
+\begin{center}
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{3}{tableLight}{}
+	\begin{longtable}{  p{2.5cm} p{9.8cm} }
+		\rowcolor{tableHead}
+		\textbf{\textcolor{white}{Identificativo}} & \textbf{\textcolor{white}{Descrizione}} \\
+		\endhead  
+		
+		
+		UC9 &  \textit{Attori}: corriere \newline \textit{Scopo}: l'utente può avviare Concierge Croccante \newline \textit{Pre-condizione}: il dispositivo Amazon deve aver avviato l'assistente Alexa \newline \textit{Post-condizione}: l'utente ha avviato Concierge Croccante \\
+		
+		UC10 &  \textit{Attori}: corriere \newline \textit{Scopo}: l'utente riceve un messaggio di benvenuto sul display del dispositivo \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente riceve un messaggio di benvenuto sul display del dispositivo \\
+		
+		UC11 &  \textit{Attori}: corriere \newline \textit{Scopo}: l'utente riceve un messaggio vocale di benvenuto dalla Skill \mbox{Concierge} Croccante \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente riceve un messaggio vocale dalla Skill C.C.\\
+		
+		UC12 &  \textit{Attori}: corriere \newline \textit{Scopo}: l'utente visualizza l'elenco sintetico ed essenziale di azioni sul \mbox{display} del dispositivo \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente visualizza l'elenco di azioni sul display del dispositivo \\
+		
+		UC13 &  \textit{Attori}: corriere \newline \textit{Scopo}: viene esposto all'utente l'elenco sintetico ed essenziale di azioni \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: viene esposto all'utente l'elenco di azioni disponibili da C.C. \\
+		
+		UC14 &  \textit{Attori}: corriere \newline \textit{Scopo}: l'utente può consegnare un pacco \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente consegna il pacco \\
+		
+		UC15 &  \textit{Attori}: corriere \newline \textit{Scopo}: viene visualizzato un messaggio, su display e vocale, di errore specifico per l'eccezione riscontrata \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente riceve un messaggio su display e vocale di errore\\
+		
+		UC17 &  \textit{Attori}: corriere \newline \textit{Scopo}: l'utente per consegnare il pacco richiede la presenza di una persona specifica per una firma \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente riceve la firma desiderata e consegna il pacco\\
+		
+		UC18 &  \textit{Attori}: corriere \newline \textit{Scopo}: l'utente per consegnare il pacco richiede la presenza di una persona per una firma \newline \textit{Pre-condizione}: la Skill Concierge Croccante deve essere stata avviata \newline \textit{Post-condizione}: l'utente riceve la firma desiderata e consegna il pacco\\
+		\rowcolor{white}
+		\caption{Tabella casi d'uso corriere}
+	\end{longtable}
+\end{center}
+\section{Voice User Interface - VUI}
+\section{Graphical User Interface - GUI}
