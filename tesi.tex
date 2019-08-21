@@ -71,7 +71,8 @@
 
 \usepackage[italian]{varioref}          % riferimenti completi della pagina
 
-\usepackage[dvipsnames]{xcolor}         % colori
+
+\usepackage[table,dvipsnames]{xcolor}         % colori
 
 \usepackage{booktabs}                   % tabelle                                       
 \usepackage{tabularx}                   % tabelle di larghezza prefissata                                    
@@ -94,6 +95,17 @@
                                         % 2. eseguire: biber tesi
                                         % 3. compilare ancora tesi.tex.
 
+% -------------------------------------------------------------------
+% Package tabella
+% -------------------------------------------------------------------
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{xcolor}
+\definecolor{tableHead}{RGB}{158,9,46}
+\definecolor{tableLight}{RGB}{255, 247, 234}
+
+\usepackage{float}
+
 \input{tesi-config}                     % file con le impostazioni personali
 
 \begin{document}
@@ -112,6 +124,30 @@
 %**************************************************************
 % Materiale principale
 %**************************************************************
+
+% * INTRODUZIONE
+% - Breve descrizione del progetto
+% - Principali problematiche
+% - Soluzione scelta
+% - Strumenti utilizzati
+% - Descrizione del prodotto ottenuto
+% - Sruttura del resto della relazione
+
+% * ANALISI DEI REQUISITI
+
+% * PROGETTAZIONE
+
+% * REALIZZAZIONE E TESTING
+
+% * CONCLUSIONI
+
+% - Risultato ottenuto
+% - Analisi critica del prodotto e del lavoro di stage in generale
+% - Il prodotto e utilizzato?
+% - Valutazione degli strumenti utilizzati
+% - Possibili punti di insoddisfazione e relativi miglioramenti
+% - Possibili estensioni
+
 \mainmatter
 \input{capitoli/capitolo-1}             % Introduzione
 \input{capitoli/capitolo-2}             % Processi
