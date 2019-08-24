@@ -16,7 +16,7 @@ L’obiettivo del progetto di stage è la realizzazione di una Skill per l’ass
 \subsection{Cliente finale}
 Il cliente finale a cui è destinato il prodotto è l’azienda Crispy Bacon Srl, la quale necessita, per ovvi motivi, di un sistema automatizzato che svolga il ruolo di Concierge all'entrata degli uffici. L’azienda desidera, con questo prodotto, realizzare uno prototipo da poter rendere spendibile tale servizio proponendolo come pacchetto preconfezionato o da personalizzare al fine di venderlo a clienti terzi.
 
-\section{Attori coinvolti}
+\section{Utenti coinvolti}
 Dall'analisi fatta sono emersi i seguenti attori, intesi come persone coinvolte nell'utilizzo della Skill:
 \begin{itemize}
     \item Visitatore
@@ -50,7 +50,9 @@ Per identificare i requisti viene utilizzata la seguente notazione tabellare con
         \end{itemize}
     \item y: identifica un valore numerico progressivo a partire da 1
 \end{itemize}
-In merito allo studio di analisi fatto all'inizio del periodo di tirocinio sono emersi i seguenti requisti, \textbf{considerati obbligatori} per il soddisfacimento del risultato atteso dal prodotto finale.
+In merito allo studio di analisi fatto all'inizio del periodo di tirocinio sono emersi i seguenti requisti, \textbf{considerati obbligatori} per il soddisfacimento del risultato atteso dal prodotto finale. I requisiti riportati vengono divisi per Voice User Interface, Graphical User Interface e funzionalità.
+\newpage
+\noindent Requisti analizzati per il Voice User Interface:
 \begin{center}
 	\centering
 	\renewcommand{\arraystretch}{1.5}
@@ -60,19 +62,18 @@ In merito allo studio di analisi fatto all'inizio del periodo di tirocinio sono 
 		\textbf{\textcolor{white}{Identificativo}} & \textbf{\textcolor{white}{Requisito}} \\
 		\endhead  
 		RO1 & La Skill al momento dal lancio deve presentare un messaggio di benvenuto (VUI) \\
-		RO2 & La Skill al momento dal lancio deve presentare un messaggio di benvenuto (GUI) \\
-		RO3 & La Skill al momento dal lancio deve presentare un elenco essenziale e sintetico delle azioni da fare (VUI) \\ 
-		RO4 & La Skill al momento dal lancio deve presentare un elenco essenziale e sintetico delle azioni da fare  (GUI) \\
-		RO5 & La Skill deve poter ricevere le informazioni necessarie dal visitatore per mezzo di una conversazione impostata (VUI)  \\
-		RO6 & La Skill deve poter riportare le informazioni ottenute dal visitatore e riportarle nello schermo del dispositivo (GUI) \\
-		RO7\label{RO7} & La Skill deve poter utilizzare e interrogare il servizio di calendarizzazione con le informazioni ottenute dal visitatore al fine di notificare l'interessato della visita.\\
-		RO8\label{RO8} & La Skill deve notificare o inviare una notifica all'interessato della visita.\\
-		RO9 & La Skill deve riportare sullo schermo del dispositivo delle funzioni disponibili in base alle risposte ricevute dal dialogo fatto con il visitatore (GUI - VUI)\\
+		RO2 & Successivamente al lancio della Skill, essa deve presentare un elenco essenziale e sintetico delle azioni disponibili (VUI) \\ 
+		RO3 & La Skill deve poter ricevere le informazioni necessarie dal visitatore per mezzo di una conversazione impostata (VUI) \\
+		RO4 & La Skill al termine del dialogo deve restituire una risposta appropriata nel caso di controlli positivi (VUI) \\
+		RO5 & La Skill al termine del dialogo deve restituire una risposta appropriata nel caso di controlli negativi (VUI) \\
+		RO6 & La Skill deve porre almeno 2 volte la domanda, posta in maniera differente dalla precedente, nel caso non riceva alcun comando dall'utente (VUI) \\
+		RO7 & La Skill deve porre almeno 2 volte la domanda, posta in maniera differente dalla precedente, nel caso la risposta ricevuta attesa non dovesse essere corretta. (VUI)  \\
+		RO8 & La Skill deve notificare al visitatore l'arrivo del dipendente cercato (VUI).\\
 		\rowcolor{white}
-		\caption{Tabella tracciamento requisiti obbligatori}
+		\caption{Tabella tracciamento requisiti obbligatori - VUI}
 	\end{longtable}
 \end{center}
-Infine nell'analisi sono stati individuati anche i \textbf{requisiti desiderabili}, considerati non strettamente necessari ma di valore aggiunto al prodotto atteso.
+Requisti analizzati per il Graphical User Interface:
 \begin{center}
 	\centering
 	\renewcommand{\arraystretch}{1.5}
@@ -81,15 +82,57 @@ Infine nell'analisi sono stati individuati anche i \textbf{requisiti desiderabil
 		\rowcolor{tableHead}
 		\textbf{\textcolor{white}{Identificativo}} & \textbf{\textcolor{white}{Requisito}} \\
 		\endhead  
-		RD1 & La Skill una volta verificata la presenza del visitatore informa quest'ultimo se l'interessato risulta non reperibile se assente \\
-		RD2 & La Skill deve poter registrare il momento in cui il visitatore inizia l'incontro con la persona cercata nel caso di un appuntamento \\
-		RD3 & La Skill deve poter registrare il momento in cui il visitatore termina l'incontro con la persona cercata nel caso di un appuntamento \\
+		RO9 & La Skill al momento dal lancio deve presentare un messaggio di benvenuto (GUI) \\
+		RO10 & Successivamente al lancio della Skill, essa deve presentare un elenco essenziale e sintetico delle azioni da fare  (GUI) \\
+		RO11 & La Skill deve riportare il risultato finale del dialogo nello schermo del dispositivo (GUI) \\
+	    RO12 & La Skill deve, qualora necessario, presentare una lista di nomi dei dipendenti dell'azienda (GUI) \\
+	    RO13 & La lista citata nel requisito RO11 deve poter essere cliccabile nello schermo touch del dispositivo (GUI) \\
+	    RO14 & La Skill poter entrare in modalità presentazione per mezzo di un comando vocale (GUI) \\
+	    RO15 & La Skill consigliare i comandi a video (GUI) \\
+	    RO16 & La Skill deve notificare al visitatore l'arrivo del dipendente cercato (GUI).\\
+		\rowcolor{white}
+		\caption{Tabella tracciamento requisiti obbligatori - GUI}
+	\end{longtable}
+\end{center}
+Requisti analizzati per funzionalità:
+\begin{center}
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{3}{tableLight}{}
+	\begin{longtable}{  p{2.5cm} p{9.8cm} }
+		\rowcolor{tableHead}
+		\textbf{\textcolor{white}{Identificativo}} & \textbf{\textcolor{white}{Requisito}} \\
+		\endhead  
+		RO17 & La Skill deve poter utilizzare e interrogare il servizio di calendarizzazione di Google con le informazioni ottenute dal visitatore al fine di notificare l'interessato della visita.\\
+		RO18 & La Skill inviare una notifica all'interessato della visita.\\
+		RO19 & La Skill inviare una notifica all'interessato al momento di una consegna di un pacco e/o lettera.\\
+		\rowcolor{white}
+		\caption{Tabella tracciamento requisiti obbligatori - Funzionalità}
+	\end{longtable}
+\end{center}
+
+\noindent Infine nell'analisi sono stati individuati anche i \textbf{requisiti desiderabili}, considerati non strettamente necessari ma di valore aggiunto al prodotto atteso.
+\begin{center}
+	\centering
+	\renewcommand{\arraystretch}{1.5}
+	\rowcolors{3}{tableLight}{}
+	\begin{longtable}{  p{2.5cm} p{9.8cm} }
+		\rowcolor{tableHead}
+		\textbf{\textcolor{white}{Identificativo}} & \textbf{\textcolor{white}{Requisito}} \\
+		\endhead
+		RD1 & Rifacendosi al requisito RO1, la Skill al momento dal lancio deve presentare un messaggio di benvenuto diverso da quello precedente (VUI) \\
+		RD2 & La Skill una volta verificata la presenza del visitatore informa quest'ultimo se l'interessato risulta non reperibile se assente \\
+		RD3 & La Skill deve poter registrare il momento in cui il visitatore inizia l'incontro con la persona cercata nel caso di un appuntamento \\
+		RD4 & La Skill deve poter registrare il momento in cui il visitatore termina l'incontro con la persona cercata nel caso di un appuntamento \\
 		\rowcolor{white}
 		\caption{Tabella tracciamento requisiti desiderabili}
 	\end{longtable}
 \end{center}
+
+\newpage
 \section{Casi d'uso}
-Dalle analisi fatte e dai dati raccolti sono stati studiati i requisiti funzionali, ovvero i casi d'uso del prodotto Concierge Crocante, che permettono di descrivere interazioni tra gli utenti, tra il sistema e come quest'ultimo deve essere utilizzato. Durante lo stage sono stati così esaminate le sequenze di passi che descrivono interazioni e la rappresentazione di possibilità, che hanno in comune uno scopo finale per un utente (attore).\\[0.4cm]
+Dalle analisi fatte e dai dati raccolti sono stati studiati i requisiti funzionali, ovvero i casi d'uso del prodotto Concierge Crocante, che permettono di descrivere interazioni tra gli utenti, tra il sistema e come quest'ultimo deve essere utilizzato. Durante lo stage sono stati così esaminate le sequenze di passi che descrivono interazioni e la rappresentazione di possibilità, che hanno in comune uno scopo finale per un utente (attore).
+\subsection{Attori}
 Gli attori emersi nell'analisi dei casi d’uso svolgono il ruolo dell'utente nell'interazione con la Skill per raggiungere l’obiettivo prefissato. In questa analisi sono stati individuati gli attori:
     \begin{itemize}
         \item Utente generico, che può essere generalizzato in:
@@ -107,11 +150,11 @@ Gli attori emersi nell'analisi dei casi d’uso svolgono il ruolo dell'utente ne
 Di seguito viene riportato lo schema degli attori individuati utilizzando lo standard UML 2.0
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=0.9\columnwidth]{immagini/attori.png}
+    \includegraphics[width=0.8\columnwidth]{immagini/attori.png}
     \caption{\label{fig:attori}Utenti del sistema}
 \end{figure}
 \subsection{Casi d'uso - Visitatore}
-Durante il periodo di tirocinio, la fase di analisi dei casi d'uso è da considerarsi divisa in due parti simili fra loro: quella dedicata al visitatore, ovvero colui che si presenta negli uffici dell'azienda avente un appuntamento registrato in calendario, o che semplicemente si presenta senza preavviso, e il servizio di consegna pacchi svolto dal postino o dal corriere. In entrambe le parti gli attori avvieranno la Skill installata nel dispositivo Amazon Echo Show e seguiranno le istruzioni riportate a voce dall'assistente vocale oppure mostrate a video dal display. In questa sezione viene riporta una rappresentazione grafica dei casi d'uso dell'utente identificato come "Visitatore avente appuntamento", che descrive le interazioni che l'attore svolge con il sistema.  
+Durante il periodo di tirocinio, la fase di analisi dei casi d'uso è da considerarsi divisa in due parti simili fra loro: quella dedicata al visitatore, ovvero colui che si presenta negli uffici dell'azienda avente un appuntamento registrato in calendario, o che semplicemente si presenta senza preavviso, e il servizio di consegna pacchi svolto dal postino o dal corriere. In entrambe le parti gli attori avvieranno la Skill installata nel dispositivo Amazon Echo Show e seguiranno le istruzioni riportate a voce dall'assistente vocale oppure mostrate a video dal display. In questa sezione viene riporta una rappresentazione grafica dei casi d'uso dell'utente identificato come "Visitatore avente appuntamento", che descrive le interazioni che l'attore svolge con il sistema. Di seguito viene riportato il diagramma dei casi d'uso individuati utilizzando lo standard UML 2.0
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=1\columnwidth]{immagini/casi_duso1.png}
@@ -197,12 +240,14 @@ Dall'elaborazione di tale analisi sono quindi emersi i seguenti casi d'uso ripor
 \end{center}
 \subsection{Casi d'uso - Postino/Corriere}
 La seconda parte di analisi dei casi d'uso, è dedicata al servizio di consegna dei pacchi che viene svolto dal postino o dal corriere. In questa sezione si rappresenta graficamente i casi d'uso dell'utente identificato come "Corriere", che descrive le interazioni che l'attore svolge con il sistema.
+\\
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=1\columnwidth]{immagini/casi_duso3.png}
     \caption{\label{fig:casi_duso_corriere}Casi d'uso corriere}
 \end{figure}
-Dall'elaborazione di tale analisi sono quindi emersi i seguenti casi d'uso riportati:
+\newpage
+\noindent Dall'elaborazione di tale analisi sono quindi emersi i seguenti casi d'uso riportati:
 \begin{center}
 	\centering
 	\renewcommand{\arraystretch}{1.5}
@@ -234,6 +279,8 @@ Dall'elaborazione di tale analisi sono quindi emersi i seguenti casi d'uso ripor
 		\caption{Tabella casi d'uso corriere}
 	\end{longtable}
 \end{center}
+
+\newpage
 \section{Voice User Interface - VUI}
 Altro aspetto importante dell'analisi è stata sulla Voice User Interface, che nel documento verrà abbreviato con l'acronimo VUI. La VUI per la Skill è l’interfaccia che rende possibile l’interazione umana parlata con il computer, utilizzando il riconoscimento vocale per comprendere comandi e domande vocali, ed infine il text to speech per riprodurre una risposta. Nel caso del progetto la VUI è rappresentata dall'assistente vocale Amazon Alexa, la quale eseguirà la Skill prodotta. Vista la ovvia complessità che presenta un'interazione umana vocale con un computer, la VUI fornita dall'assistente vocale Alexa presenta alcuni limiti che verranno analizzati successivamente in un nuovo punto del capitolo.\\
 L’obbiettivo che si prefigge nel realizzare la Skill è quello di poter sostenere una conversazione, il più naturale possibile, con la persona accolta all'entrata dell'azienda Crispy Bacon. L’idea è quindi che l’ospite possa dialogare con Concierge Croccante, motivare la presenza in azienda e notificare l’interessato della visita. Dall'analisi emerge una conversazione come l'esempio seguente in formato testo di quello che si vuole ottenere dal prodotto finale:
@@ -270,4 +317,104 @@ La Skill Concierge Croccante necessita quindi di ricevere dati in input per pote
 	\end{longtable}
 \end{center}
 \subsection{Voice Flow}
+Al termine della fase di analisi sulla VUI si ha ottenuto come risultato il Voice Flow, ovvero il percorso ipotetico che l’utente può intraprendere durante la conversazione con la Skill Concierge Croccante, rappresentato dal diagramma di attività secondo lo standard UML 2.0. Quest'ultimo è un tipo di diagramma che permette la descrizione un processo attraverso dei grafi in cui i nodi rappresentano le attività e gli archi l'ordine con cui vengono eseguite. Permette inoltre la descrivere gli aspetti dinamici dei casi d'uso e supporta l'elaborazione parallela.
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\columnwidth]{immagini/attivita.png}
+    \caption{\label{fig:voice_flow}Diagramma di attività VUI - Concierge Croccante}
+\end{figure}
+\subsection{Interazione vocale - UC6}
+Di seguito si riporta l'analisi descrittiva e testuale dell'interazione vocale del UC6, riportato in tabella ?, considerato significativo per la comprensione dei dialoghi.
+\begin{itemize}
+	\item \textit{Utente - Persona}: "Salve! Devo incontrare \texttt{\{nome1 e cognome1\}}."
+	\item[-] \textit{Alexa - Concierge Croccante}:  "Può gentilmente dirmi il suo nome e cognome?" 
+	\item \textit{Utente - Persona}: "\texttt{\{nome2 e cognome2\}}."
+	\item[-] \textit{Alexa - Concierge Croccante}:  "A che ora ha l'appuntamento?"
+	\item \textit{Utente - Persona}: "\texttt{\{orario\}}."
+	\item[-] \textit{Alexa - Concierge Croccante}:  "Ho notificato a \texttt{\{nome1\}} che lei è qui, fra pochi secondi sarà da lei."
+\end{itemize}
+Altra casistica:
+\begin{itemize}
+	\item \textit{Utente - Persona}: "Salve! Sono \texttt{\{nome2 e cognome2\}}, devo incontrare \texttt{\{nome1 e cognome1\}}."
+	\item[-] \textit{Alexa - Concierge Croccante}:  "Ha un appuntamento?"
+	\item \textit{Utente - Persona}: "Si."
+	\item[-] \textit{Alexa - Concierge Croccante}:  "A che ora ha l'appuntamento?"
+	\item \textit{Utente - Persona}: "\texttt{\{orario\}}."
+	\item[-] \textit{Alexa - Concierge Croccante}:  "Ho notificato a \texttt{\{nome1\}} che lei è qui, fra pochi secondi sarà da lei."
+\end{itemize}
+Nel caso in cui l'utente non abbia un appuntamento o non risulta nel calendario l'incontro, si riceverà la seguente risposta: 
+\begin{itemize}
+	\item[-] \textit{Alexa - Concierge Croccante}:  "Non ci risulta che lei abbia un appuntamento, ma ho comunque provveduto a chiamare \texttt{\{nome1\}}."
+\end{itemize}
+\newpage
 \section{Graphical User Interface - GUI}
+Un altro aspetto, studiato per concludere tutti gli aspetti dell'analisi, è stata la Graphical User Interface, che nel documento verrà abbreviato con l'acronimo GUI. La GUI è l'interfaccia grafica utente che consente l’interazione uomo-macchina in modo visuale utilizzando rappresentazioni grafiche. Nel caso del progetto la GUI è costituita da delle Multimodal Displays, ovvero delle visuals che riportano dei dati (anche linkati) e delle funzionalità, mostrate sullo schermo del dispositivo Amazon Echo Show. Le visuals mostrate sono quindi a supporto della VUI e hanno il compito di riportare a video informazioni utili a migliorare la conversazione uomo-macchina.
+\\
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\columnwidth]{immagini/home_gui.jpg}
+    \caption{\label{fig:esempioGUI}Esempio GUI - Home}
+\end{figure}
+\newpage
+\noindent La GUI svolge quindi il compito di supporto per aiutare e migliorare l’esperienza di dialogo. L’immagine sopra riporta una visual che propone di presentare dei dati secondo quel determinato layout. In questa fase di analisi vengono esposti alcuni layout significativi che mostrano a schermo alcune informazioni:
+\\[0.4cm]
+\begin{minipage}{0.47\textwidth}
+	\begin{figure}[H]
+		\includegraphics[width=1\columnwidth]{immagini/aiuto_gui.jpg}
+		\caption{\label{fig:esempioGUI2}Esempio di visual - Aiuto}
+	\end{figure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\begin{itemize}  
+		\item Titolo - \texttt{Nome dell'azienda}
+		\item Azione \texttt{n}
+		\item Immagine azione \texttt{n}
+		\item \textit{altre informazioni}
+	\end{itemize}
+\end{minipage}
+\\[0.4cm]
+\begin{minipage}{0.47\textwidth}
+	\begin{figure}[H]
+		\includegraphics[width=1\columnwidth]{immagini/consegna_gui.jpg}
+		\caption{\label{fig:esempioGUI3}Esempio di visual - Consegna}
+	\end{figure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\begin{itemize}  
+		\item Titolo - \texttt{Nome dell'azienda}
+		\item Informazione
+		\item Immagine allegata
+		\item \textit{altre informazioni}
+	\end{itemize}
+\end{minipage}
+\\[0.4cm]
+\begin{minipage}{0.47\textwidth}
+	\begin{figure}[H]
+		\includegraphics[width=1\columnwidth]{immagini/incontri_gui.jpg}
+		\caption{\label{fig:esempioGUI4}Esempio di visual - Visitatore avente appuntamento}
+	\end{figure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\begin{itemize}  
+		\item Titolo - \texttt{Nome dell'azienda}
+		\item Informazioni sull'appuntamento
+		\item Immagine allegata
+		\item \textit{altre informazioni}
+	\end{itemize}
+\end{minipage}
+
+\newpage
+\section{Limiti}
+Come già in precedenza menzionato gli assistenti vocali presentano dei limiti, in quanto non riescono a sostenere una conversazione completamente naturale con una persona umana. Nel contesto del progetto i limiti che si riscontrano nella Skill e Alexa sono i seguenti:
+\begin{itemize}
+	\item Alexa
+	\begin{itemize}
+		\item Non è possibile richiamare l'attenzione dell'assistente vocale senza pronunciare la parola \textit{"Alexa"}
+		\item Per motivi linguistici l'assistente vocale può fare fatica a comprendere i nomi di persone
+	\end{itemize}
+	\item Skill Concierge Croccante
+	\begin{itemize}
+		\item La Skill non può essere avviata senza il lancio da parte di Alexa
+		\item La Skill, per motivi implementativi, non può rimanere in ascolto per più di 8 secondi in attesa di una risposta da parte dell'utente
+	\end{itemize}
+\end{itemize}
