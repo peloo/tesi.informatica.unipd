@@ -3,30 +3,49 @@
 % !TEX root = ../tesi.tex
 
 %**************************************************************
-\chapter{Descrizione dello stage}
-\label{cap:descrizione-stage}
+\chapter{Progettazione e codifica}
+\label{cap:progettazione}
+In questo capitolo verrà tratta il secondo periodo del tirocinio: la progettazione e la codifica. Questa parte, avvenuta dopo l'Analisi dei Requisiti, è da ritenersi importante per progetto in quanto ha occupato gran parte del tempo lavorativo. Il primo passo è stato eseguire la progettata dell'architettura, in modo che i servizi necessari fossero correttamente configurati prima del loro effettivo utilizzo. Successivamente è stata eseguita la stesura del codice per la realizzazione della Skill. Nei paragrafi successivi seguiranno porzioni di codice significativo per la loro importanza e per il funzionamento di determinate funzionalità e/o servizi. Importante ricordare che il codice implementato e mostrato sarà in Node.js come quanto detto nel nel paragrafo \hyperref[nodejs]{1.4.1}. 
 %**************************************************************
+\section{Architettura}
+Come riportato nel paragrafo \hyperref[serivizi_aws]{1.4.3}, il progetto si basa interamente sui servizi offerti dall'ecosistema Amazon. Di conseguenza è risultato facile ed immediato impostare i servizi dell'architettura in modo da rendere il tutto efficacie ed efficiente. In questo paragrafo si andrà a comprendere cosa offre ogni singolo servizio di AWS e come esso è stato impostato per il suo corretto funzionamento nella Skill.
+\section{Configurazione servizi Amazon Web Service}
+\subsection{AWS SES}
+Amazon SES\footnote{\href{AWS SES. URL: https://aws.amazon.com/it/ses/}{https://aws.amazon.com/it/ses/}} (Simple Email Service) è un servizio di invio e-mail basato sul cloud messo a disposizione da Amazon per gli sviluppatori di applicazioni. Tale servizio è da considerarsi vantaggioso in quanto è affidabile e a costo ridotto, utile per qualunque tipo di azienda ed ideale per la realizzazione del progetto.
+\newpage
+\noindent Per utilizzare AWS SES è necessario impostare il servizio visitando la pagina\footnote{\href{AWS SES. URL: https://aws.amazon.com/it/ses/}{https://aws.amazon.com/it/ses/}} dedicata ed eseguire le istruzioni riportate:\\[0.5cm]
+\begin{minipage}{0.47\textwidth}
+	\begin{figure}[H]
+		\includegraphics[width=6cm]{immagini/ses.png}
+		\caption{\label{fig:icona_aws_ses}Icona AWS SES}
+	\end{figure}
+\end{minipage}
+\begin{minipage}{0.5\textwidth}
+	\begin{itemize}
+		\item Eseguire l'accesso con le proprie credenziali di account AWS
+    	\item Cliccare \texttt{Email Addresses }sul pannello a sinistra
+    	\item Cliccare \texttt{Verify a New Email Address}
+    	\item Inserire l'indirizzo e-mail da verificare che verrà utilizzato per inviare le notifiche
+    	\item Confermare la verifica cliccando sul URL contenuto nella e-mail ricevuta.
+	\end{itemize}
+\end{minipage}
+\\[0.5cm]
+Il procedimento descritto sopra non fa altro che verificare l'indirizzo e-mail con il quale si andrà ad inviare messaggi di posta elettronica tramite la Skill. A questo punto è possibile mandare messaggi e notifiche tramite mail utilizzando l'indirizzo verificato prima.
+\subsection{AWS S3}
+\subsection{AWS IAM}
+\subsubsection{AWS Cloud Watch}
+\subsubsection{AWS DynamoDB}
+\subsection{AWS Lambda ed Alexa Developer Console}
 
-\intro{Breve introduzione al capitolo}\\
+\section{Configurazione Google Calendar}
 
-%**************************************************************
-\section{Introduzione al progetto}
+\section{Configurazione Slack}
 
-%**************************************************************
-\section{Analisi preventiva dei rischi}
-
-Durante la fase di analisi iniziale sono stati individuati alcuni possibili rischi a cui si potrà andare incontro.
-Si è quindi proceduto a elaborare delle possibili soluzioni per far fronte a tali rischi.\\
-
-\begin{risk}{Performance del simulatore hardware}
-    \riskdescription{le performance del simulatore hardware e la comunicazione con questo potrebbero risultare lenti o non abbastanza buoni da causare il fallimento dei test}
-    \risksolution{coinvolgimento del responsabile a capo del progetto relativo il simulatore hardware}
-    \label{risk:hardware-simulator} 
-\end{risk}
-
-%**************************************************************
-\section{Requisiti e obiettivi}
-
-
-%**************************************************************
-\section{Pianificazione}
+\section{Codifica}
+\subsection{Organizzazione del codice}
+\subsection{Invio notifiche}
+\subsubsection{Slack}
+\subsubsection{E-mail}
+\subsection{Lettura del calendario}
+\subsection{Lettura del Database}
+\subsection{Cambio di contesto}
