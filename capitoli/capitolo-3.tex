@@ -408,7 +408,7 @@ Per l’integrazione col servizio di Slack sono a disposizione delle API documen
 		\item Node.js
 		\item slack-notify package
 		\item Account Slack
-		\item Incoming Webook
+		\item Incoming Webhook
 	\end{itemize}
 \end{minipage}
 \\[0.4cm]
@@ -457,10 +457,10 @@ Per l'invio di notifiche via e-mail, come già detto in precedenza, è stato uti
 \end{minipage}
 \begin{minipage}{0.5\textwidth}
 	\begin{itemize}
-		\item \textbf{Node.js}
-		\item \textbf{npm aws-sdk}
-		\item \textbf{Account AWS}
-		\item \textbf{Indirizzo e-mail}
+		\item Node.js
+		\item npm aws-sdk
+		\item Account AWS
+		\item Indirizzo e-mail
 	\end{itemize}
 \end{minipage}
 \\[0.4cm]
@@ -472,6 +472,7 @@ All'interno del progetto Concierge Croccante l'invio di notifiche o messaggi via
 \lstinputlisting[caption=Metodo sendMail]{code/emailUtils.js}
 Il codice sopra riportato mostra il metodo \texttt{sendMail(from:  var, to:  var, message:  var, oggetto:  var)}: tale funzione non fa altro che inviare una e-mail con i campi from, to, message ed oggeto passati per parametro. La variabile constante \texttt{ses} non fa altro che richiamare il metodo fornito del pacchetto \texttt{aws-sdk} che si occuperà di richiamare le API necessarie all'utilizzo di AWS SES.
 
+\newpage
 \section{Lettura del Database}
 Funzionalità a supporto di quelle principali è la lettura del database DynamoDB. Quest'ultimo è popolato da una tabella contente i nomi di tutti i dipendenti dell'azienda Crispy Bacon, i quali, vengono prelevati per essere utilizzati nelle fasi di controllo, come la ricerca di un dipendente per verificarne la sua esistenza. Il progetto predispone due classi adibite a questo tipo di funzionalità per interrogare il database: \texttt{databaseUtils.js} e \texttt{prepareQuery.js}.
 

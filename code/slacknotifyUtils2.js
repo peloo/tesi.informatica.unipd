@@ -1,5 +1,5 @@
-const MY_SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/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';
-const TOKEN = "xoxb-117197354337-701891802919-12OEClhwYXKKaj5ulGEo3vCh";
+const MY_SLACK_WEBHOOK_URL = 'https://hooks.slack.com/services/xxxxxxxxxxxxx/xxxxxxxxxxxxx';
+const TOKEN = "xoxb-117197354337-xxxxxxxxxxxxx-12OEClhwYXKKaj5ulGEo3vCh";
 const request = require('request');
 const slack = require('slack-notify')(MY_SLACK_WEBHOOK_URL);
 
