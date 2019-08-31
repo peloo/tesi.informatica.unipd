@@ -52,7 +52,7 @@ Cripsy Bacon è da considerarsi un'azienda di medio/piccole dimensioni, di giova
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=1\columnwidth]{immagini/scrum.png}
-    \caption{\label{fig:alexa_aws}Modello Agile - SCRUM}
+    \caption{\label{fig:agile_scrum}Modello Agile - SCRUM}
 \end{figure}
 Sulla base di tali considerazioni, in accordo con l'azienda, la scelta sulla metodologia di sviluppo è ricaduta sul modello di lavoro agile\footnote{\href{Modello agile: URL: https://agilemanifesto.org/iso/it/manifesto.html}{https://agilemanifesto.org/iso/it/manifesto.html}} utilizzando il framework Scrum\footnote{Framework Scrum. URL: \href{https://it.wikipedia.org/wiki/Scrum\_(informatica)}{https://it.wikipedia.org/wiki/Scrum\_(informatica)}}. Tale framework viene adattato dell'azienda nel seguente modo:
 \begin{itemize}
@@ -97,7 +97,7 @@ Per l'invio di notifiche la scelta ricade su Slack, uno strumento software che p
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=1\columnwidth]{immagini/architettura.png}
-    \caption{\label{fig:alexa_aws}Logo di Alexa e AWS}
+    \caption{\label{fig:architettura}Architettura progetto C.C.}
 \end{figure}
 
 \section{Strumenti utilizzati}
@@ -116,7 +116,7 @@ Per vedere e testare il prodotto finale si è usato l'Amazon Echo Show, uno smar
 
 \subsection{NPM}
 \label{npm}
-Per installare i pacchetti necessari è stato utilizzato NPM, il principale software per gestire i moduli di Node.js e consente di condividere il codice per problemi tipici tra gli sviluppatori JavaScript. La filosofia alla base di tale gestore è quella che se un problema è stato già risolto da altri programmatori deve esser possibile utilizzare la soluzione condivisa messa a disposizione degli altri utenti. NPM oltre a consentire il riuso del codice, consente di tenerlo costantemente sotto controllo in modo da aggiornarlo. NPM suddivide inoltre il codice in package, ovvero una directory che contiene uno o più file insieme, dove un file chiamato package.json contiene i dati relativi al pacchetto.
+Per installare i pacchetti necessari è stato utilizzato npm, il principale software per gestire i moduli di Node.js e consente di condividere il codice per problemi tipici tra gli sviluppatori JavaScript. La filosofia alla base di tale gestore è quella che se un problema è stato già risolto da altri programmatori deve esser possibile utilizzare la soluzione condivisa messa a disposizione degli altri utenti. npm oltre a consentire il riuso del codice, consente di tenerlo costantemente sotto controllo in modo da aggiornarlo. npm suddivide inoltre il codice in package, ovvero una directory che contiene uno o più file insieme, dove un file chiamato package.json contiene i dati relativi al pacchetto.
 
 \subsection{Gitlab}
 Il versionamento degli applicativi viene fatto tramite Git\footnote{Git. URL: \href{https://git-scm.com/}{https://git-scm.com/}} e i repository sono ospitati su Gitlab\footnote{Gitlab. URL: \href{https://about.gitlab.com/}{https://about.gitlab.com/}} in un server dedicato dell'azienda. GitLab è una piattaforma che permette la gestione centralizzata dei repository Git, permettendo l'amministrazione dei permessi d'accesso tramite una semplice interfaccia grafica. Tutti gli applicativi e le configurazioni dell'infrastruttura vengono ospitati sulla piattaforma e il versionamento segue regole del Git-Flow dove le funzionalità nuove vengono sviluppate su un branch dedicato, per poi essere spostate successivamente nei branch di sviluppo, accettazione e infine produzione.
