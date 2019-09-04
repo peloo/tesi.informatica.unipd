@@ -19,7 +19,7 @@ class emailUtils {
         }
         ses.sendEmail(params, (err, data) => {
             if (err) {
-                console.log("[emailUtils.sendEmail error]:", err, err.stack)
+                console.log("[emailUtils.sendEmail]:", err, err.stack)
                 throw err;
             } else
                 console.log("[emailUtils.sendEmail]: Email notification sent!")
