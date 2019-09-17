@@ -12,20 +12,20 @@ Successivamente alla parte di comprensione e configurazione dei servizi utilizza
 \begin{itemize}
         \item \texttt{Skill}: cartella principale del progetto (main folder) contenente al suo interno altre cartelle e file organizzati secondo una determinata gerarchia
         \begin{itemize}
-            \item[>] \texttt{apl-data}: cartella contenente i dati delle schermate APL
-            \item[>] \texttt{apl-template}: cartella contenente i template lo stile delle schermate APL
-            \item[>] \texttt{hendelrs}: cartella contenente i file .js di ogni handlers (gestori) creati nella Skill
-            \item[>] \texttt{i18n}: cartella contente file .js con le traduzioni della lingua 
-            \item[>] \texttt{node\_modules}: cartella contenente tutti i pacchetti installati con il gestore npm
-            \item[>] \texttt{task}: cartella contente file .js da eseguire a riga di comando per l'esecuzione di funzionalità primitive 
-            \item[>] \texttt{utils}: cartella contente file .js con classi di utilità, come lettura del db, invio di e-mail, ecc..
-            \item[-] \texttt{credentials.json}: file contenente delle credenziali per accedere al servizio di Google Calendar
-            \item[-] \texttt{googleAuthTokenCredential.json}: file contenente delle credenziali per accedere al servizio di Google Calendar
-            \item[-] \texttt{index.js}: file principale dove inizia l'esecuzione della Skill. La Lambda difatti partirà con la lettura di questo file
-            \item[-] \texttt{intent.json}: file .json contenente tutti gli intent creati per la Skill
-            \item[-] \texttt{package.-lock.json}: file di configurazione automaticamente creato dal gestore di pacchetti npm
-            \item[-] \texttt{package.json}: file di configurazione automaticamente creato dal gestore di pacchetti npm
-            \item[-] \texttt{policy.json}: file .json contente le regole di policy create al punto \hyperref[aws-iam]{3.2.3}
+            \item[>] \texttt{apl-data}: cartella contenente i dati delle schermate APL;
+            \item[>] \texttt{apl-template}: cartella contenente i template lo stile delle schermate APL;
+            \item[>] \texttt{hendelrs}: cartella contenente i file .js di ogni handlers (gestori) creati nella Skill;
+            \item[>] \texttt{i18n}: cartella contente file .js con le traduzioni della lingua;
+            \item[>] \texttt{node\_modules}: cartella contenente tutti i pacchetti installati con il gestore npm;
+            \item[>] \texttt{task}: cartella contente file .js da eseguire a riga di comando per l'esecuzione di funzionalità primitive;
+            \item[>] \texttt{utils}: cartella contente file .js con classi di utilità, come lettura del db, invio di e-mail, ecc..;
+            \item[-] \texttt{credentials.json}: file contenente delle credenziali per accedere al servizio di Google Calendar;
+            \item[-] \texttt{googleAuthTokenCredential.json}: file contenente delle credenziali per accedere al servizio di Google Calendar;
+            \item[-] \texttt{index.js}: file principale dove inizia l'esecuzione della Skill. La Lambda difatti partirà con la lettura di questo file;
+            \item[-] \texttt{intent.json}: file .json contenente tutti gli intent creati per la Skill;
+            \item[-] \texttt{package.-lock.json}: file di configurazione automaticamente creato dal gestore di pacchetti npm;
+            \item[-] \texttt{package.json}: file di configurazione automaticamente creato dal gestore di pacchetti npm;
+            \item[-] \texttt{policy.json}: file .json contente le regole di policy create al punto \hyperref[aws-iam]{3.2.3}.
         \end{itemize}
     \end{itemize}
 \begin{figure}[H]
@@ -36,7 +36,7 @@ Successivamente alla parte di comprensione e configurazione dei servizi utilizza
 \subsection{Handlers}
 Come descritto prima la cartella del progetto C.C. è stata disposta per una gestione ordinata del codice. Una delle sotto-cartelle contenute al suo interno è dedicata per la gestione degli handlers. Nel codice della Skill gli handlers sono delle funzioni che hanno lo scopo di gestire gli eventi che vengono scatenati all'invocazione di un comando da parte dell'utente. Gli handlers sono stati così realizzati:
 \begin{itemize}
-    \item \texttt{index.js}: che contiene ed ingloba l'export di tutte le classi dei handlers contenuti in questa cartella
+    \item \texttt{index.js}: che contiene ed ingloba l'export di tutte le classi dei handlers contenuti in questa cartella;
     
     \item \texttt{gestioneConsegne\_Complete.js}: questo handler ha il compito di catturare l'evento nel caso in cui l'utente intenda consegnare un pacco (o lettera) sapendo già il nome del destinatario e, o l'oggetto consegnato o la professione dell'utente che sta conversando;
     \item \texttt{gestioneConsegne\_NomeDipendete.js}: questo handler ha il compito di catturare l'evento nel caso in cui l'utente intenda consegnare un pacco (o lettera) senza sapere già il nome del destinatario. Questo gestore ha il compito di richiedere tale dato domandandolo all'utente che sta conversando con la Skill;
